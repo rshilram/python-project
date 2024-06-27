@@ -1,0 +1,12 @@
+<!-- profiles/templates/profiles/add_project.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Add Project</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ project_form.as_p }}
+    <button type="submit">Add Project</button>
+  </form>
+{% endblock %}
